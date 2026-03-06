@@ -17,9 +17,14 @@ export default function Home() {
             <br></br>
             template. They distill complex data into visuals.
           </p>
-          <div className="flex">
-            <button className="">Our Uervices</button>
+          <div className="flex gap-6">
+            <button className="">Our Services</button>
           <button className="">Contact Us</button>
+          </div>
+          <div className="flex">
+                      <Image src={group_profile} alt='group profile'/>
+          <p>more than 10k+ trusted customers</p>
+
           </div>
         </div>
         <div className="">
