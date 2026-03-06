@@ -2,7 +2,9 @@ import Image from "next/image";
 import group_profile from "@/public/group_profile.png";
 import hero_image from "@/public/hero-image.jpg";
 import clients from "@/app/data";
-import icon from '@/public/Icon.png'
+import icon from "@/public/Icon.png";
+import audit from "@/public/audit.jpg";
+import { ArrowRight } from "lucide-react";
 
 export default function Home() {
   return (
@@ -54,17 +56,42 @@ export default function Home() {
         </div>
       </section>
       <section>
-        <div className="">
-          <h3>
-            Amazing <br /> solutions for <br /> business
-          </h3>
-          <p>
-            With over 25 years of experience, we have crafted thousands of{" "}
-            <br /> Strategic discovery process that enables us peelback
-            thousands <br /> which enable us to understand.
-          </p>
-          <div className="
-          grid"></div>
+        <div className="grid grid-cols-3">
+          <div>
+            <h3 className="text-5xl font-bold">
+              Amazing <br /> solutions for <br /> business
+            </h3>
+            <p>
+              With over 25 years of experience, we have crafted thousands of{" "}
+              <br /> Strategic discovery process that enables us peelback
+              thousands <br /> which enable us to understand.
+            </p>
+          </div>
+          <div
+            className="
+          grid w-[306px] h-[382px] bg-[#f4f5f6]"
+          >
+            <Image src={icon} alt="icon" />
+            <h3>Marketing Strategy</h3>
+            <p>
+              when an unknown printer took gerty galley types awec erambled when
+              an unknown printea wr took galley Insurance ollowing.
+            </p>
+            <hr />
+            <div className="flex">
+              <button className="text-[#84a17d]">Learn more</button>
+              <ArrowRight className="text-[#84a17d]" />
+            </div>
+          </div>
+          <div>
+            <Image src={audit} alt="audit" width={250} />
+            <h3>Audit & Assurance</h3>
+            <hr />
+            <div className="flex">
+              <button className="text-[#84a17d]">Learn more</button>
+              <ArrowRight className="text-[#84a17d]" />
+            </div>
+          </div>
         </div>
         <div className=""></div>
       </section>
