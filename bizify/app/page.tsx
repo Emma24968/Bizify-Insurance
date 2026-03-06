@@ -4,24 +4,24 @@ import hero_image from '@/public/hero-image.jpg'
 
 export default function Home() {
   return (
-    <main>
-      <section className="">
-        <div className="">
-          <h1 className="text-5xl font-bold ">
+    <div>
+      <section className=" grid grid-cols-2 text-white h-[50px]  ">
+        <div className=" bg-[#153C3C] flex flex-col justify-center px-16 py-15">
+          <h1 className="text-5xl font-bold leading-tight">
             Get Digital <br />
             Products For <br />
             Business
           </h1>
-          <p className="">
+          <p className="my-10">
             Charts are the visual storytellers of your dashboard and admin
             <br></br>
             template. They distill complex data into visuals.
           </p>
           <div className="flex gap-6">
-            <button className="">Our Services</button>
-          <button className="">Contact Us</button>
+            <button className="bg-[#84a17d] rounded-lg py-3 px-6">Our Services</button>
+          <button className="bg-[#fff] text-black rounded-lg py-3 px-6">Contact Us</button>
           </div>
-          <div className="flex">
+          <div className="flex my-4 gap-3 items-center">
                       <Image src={group_profile} alt='group profile'/>
           <p>more than 10k+ trusted customers</p>
 
@@ -31,6 +31,10 @@ export default function Home() {
 
         </div>
       </section>
-    </main>
+      
+      <section>
+        <h3>We’ve worked on over 150 projects <br /> with 100+ clients</h3>
+      </section>
+    </div>
   );
 }
