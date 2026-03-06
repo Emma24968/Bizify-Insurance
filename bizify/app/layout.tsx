@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Image from "next/image";
 import logo from "@/public/logo.svg";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Menu, Search } from "lucide-react";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -27,25 +27,26 @@ export default function RootLayout({
 
           <nav>
             <ul className="flex gap-4">
-              <li>
+              <li className="flex gap-0.5">
                 {" "}
-                <a href="#">Home</a>
+                <a href="#" >Home</a> <ChevronDown />
               </li>
               <li>
                 <a href="#">About us</a>
               </li>
-              <li>
+              <li className="flex gap-0.5">
                 {" "}
                 <a href="#">Pages</a>
-                
+                <ChevronDown />
               </li>
-              <li>
-                <a href="#">Blog</a>
+              <li className="flex gap-0.5">
+                <a href="#">Blog</a> <ChevronDown />
               </li>
               <li>
                 <a href="#">Contact</a>
               </li>
             </ul>
+<Search />            <Menu />
           </nav>
         </header>
 
