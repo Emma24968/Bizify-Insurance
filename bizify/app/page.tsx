@@ -1,6 +1,7 @@
 import Image from "next/image";
 import group_profile from '@/public/group_profile.png'
 import hero_image from '@/public/hero-image.jpg'
+import clients from '@/app/data'
 
 export default function Home() {
   return (
@@ -34,6 +35,11 @@ export default function Home() {
       
       <section>
         <h3>We’ve worked on over 150 projects <br /> with 100+ clients</h3>
+        {clients.map((client,index)=>{
+          return(
+            <Image src={client} alt="client" key={index} />
+          )
+        })}
       </section>
     </div>
   );
