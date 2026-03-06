@@ -5,7 +5,12 @@ import logo3 from "@/public/logo3_1.png";
 import logo4 from "@/public/logo4_1.png";
 import logo5 from "@/public/logo5_1.png";
 import logo6 from "@/public/logo6_1.png";
+import digital from '@/public/Digital.jpg'
+import design from '@/public/market.jpg'
+import robotics from '@/public/Robotics.jpg'
+import development from '@/public/web-dev.jpg'
 
 const clients = [logo1, logo2, logo3, logo4, logo5, logo6];
+const services = [digital,design,robotics,development]
 
 export default clients
