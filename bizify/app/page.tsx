@@ -17,7 +17,10 @@ export default function Home() {
             <br></br>
             template. They distill complex data into visuals.
           </p>
-          
+          <div className="flex">
+            <button className="">Our Uervices</button>
+          <button className="">Contact Us</button>
+          </div>
         </div>
         <div className="">
         </div>
