@@ -29,7 +29,7 @@ export default function RootLayout({
             <ul className="flex gap-4">
               <li className="flex gap-0.5">
                 {" "}
-                <a href="#" >Home</a> <ChevronDown />
+                <a href="#">Home</a> <ChevronDown />
               </li>
               <li>
                 <a href="#">About us</a>
@@ -46,7 +46,7 @@ export default function RootLayout({
                 <a href="#">Contact</a>
               </li>
             </ul>
-<Search />            <Menu />
+            <Search /> <Menu />
           </nav>
         </header>
 
