@@ -56,7 +56,7 @@ export default function Home() {
         </div>
       </section>
       <section>
-        <div className="grid grid-cols-3">
+        <div className="grid grid-cols-3 ">
           <div>
             <h3 className="text-5xl font-bold">
               Amazing <br /> solutions for <br /> business
@@ -69,22 +69,25 @@ export default function Home() {
           </div>
           <div
             className="
-          grid w-[306px] h-[382px] bg-[#f4f5f6]"
+          grid w-[306px] h-[382px] bg-[#f4f5f6] p-6 rounded-2xl"
           >
             <Image src={icon} alt="icon" />
-            <h3>Marketing Strategy</h3>
+            <h3 className="text-2xl font-bold">Marketing Strategy</h3>
             <p>
               when an unknown printer took gerty galley types awec erambled when
               an unknown printea wr took galley Insurance ollowing.
             </p>
-            <hr />
-            <div className="flex">
+            <hr className="text-[#bdb2b2c2]" />
+            <div className="flex items-center">
               <button className="text-[#84a17d]">Learn more</button>
               <ArrowRight className="text-[#84a17d]" />
             </div>
           </div>
-          <div>
-            <Image src={audit} alt="audit" width={250} />
+          <div
+            className="
+          grid w-[306px] h-[382px] bg-[#f4f5f6] p-6 rounded-2xl"
+          >
+            <Image src={audit} alt="audit" width={250} className="rounded-2xl" />
             <h3>Audit & Assurance</h3>
             <hr />
             <div className="flex">
