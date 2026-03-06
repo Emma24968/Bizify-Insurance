@@ -27,7 +27,8 @@ export default function Home() {
 
           </div>
         </div>
-        <div className="">
+        <div className="">          <Image src={hero_image} alt="hero-image"/>
+
         </div>
       </section>
     </main>
