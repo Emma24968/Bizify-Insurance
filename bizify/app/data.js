@@ -8,6 +8,8 @@ import logo6 from "@/public/logo6_1.png";
 import digital from '@/public/Digital.jpg'
 import design from '@/public/market.jpg'
 import robotics from '@/public/Robotics.jpg'
+import core from '@/public/core.jpg'
+import value from '@/public/value.jpg'
 import development from '@/public/web-dev.jpg'
 import abstract from '@/public/Abstract.png'
 import experience from '@/public/experience.svg'
@@ -36,12 +38,12 @@ export const services = [
 
 export const cards =[
     {
-        image:digital,
+        image:core,
         logo:experience
     },
 ]
 export const card2= [{
-    image:design,
+    image:value,
     logo:abstract
 }]
 

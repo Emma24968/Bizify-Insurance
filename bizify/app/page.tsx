@@ -1,10 +1,10 @@
 import Image from "next/image";
 import group_profile from "@/public/group_profile.png";
 import hero_image from "@/public/hero-image.jpg";
-import { clients, services,cards,card2 } from "@/app/data";
+import { clients, services, cards, card2 } from "@/app/data";
 import icon from "@/public/Icon.png";
 import audit from "@/public/audit.jpg";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, CircleCheck } from "lucide-react";
 
 export default function Home() {
   return (
@@ -124,26 +124,60 @@ export default function Home() {
           })}
         </div>
       </section>
-      <section className="bg-[#f4f5f6]">
-<div  className=" flex gap-3">
-  {cards.map((card,index)=>{
-    return(
-      <div key={index}>
-        <Image src={card.image} width={200} alt="card"></Image>
-        <Image src={card.logo} width={200} alt="card"></Image>
-      </div>
-    )
-})}
-  {card2.map((card,index)=>{
-    return(
-      <div key={index}>
-        <Image src={card.logo} width={200} alt="card"></Image>
-        <Image src={card.image} width={200} alt="card"></Image>
-      </div>
-    )
-})}
-</div>
-<div className=""></div>
+      <section className="bg-[#f4f5f6] py-16">
+        <div className="flex gap-6 w-[50%]">
+          {cards.map((card, index) => {
+            return (
+              <div key={index} className="flex flex-col items-center">
+                <Image
+                  src={card.image}
+                  width={306}
+                  height={478}
+                  className="rounded-xl mb-4"
+                  alt="card image"
+                />
+
+                <Image src={card.logo} width={306} alt="card logo" />
+              </div>
+            );
+          })}
+
+          {card2.map((card, index) => {
+            return (
+              <div key={index} className="flex flex-col items-center">
+                <Image
+                  src={card.logo}
+                  width={270}
+                  height={40}
+                  className="mb-4"
+                  alt="card logo"
+                />
+
+                <Image
+                  src={card.image}
+                  width={306}
+                  height={478}
+                  className="rounded-xl"
+                  alt="card image"
+                />
+              </div>
+            );
+          })}
+        </div>
+        <div className="grid">
+          <h3>We are the top digital marketer Company</h3>
+          <p>
+            When an unknown printer took a galley of type and scrambled it ake a
+            type specimen book. when an unknown printer took a galley of type
+            and scrambled it type specimen book.
+          </p>
+          <div>
+            <CircleCheck />
+            <CircleCheck />
+            <CircleCheck />
+            <CircleCheck />
+          </div>
+        </div>
       </section>
     </div>
   );
