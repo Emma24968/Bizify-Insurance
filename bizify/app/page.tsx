@@ -57,8 +57,8 @@ export default function Home() {
       </section>
       <section className="py-16 px-20">
         <div className="flex flex-cols-3 gap-4">
-          <div className="w-[53%]">
-            <h3 className="text-5xl font-bold">
+          <div className="w-[53%] justify-center">
+            <h3 className="text-5xl font-bold mb-5">
               Amazing <br /> solutions for <br /> business
             </h3>
             <p>
@@ -66,8 +66,6 @@ export default function Home() {
               <br /> Strategic discovery process that enables us peelback
               thousands <br /> which enable us to understand.
             </p>
-                          className="
-          flex flex-col gap-4   bg-[#f4f5f6] p-6 rounded-2xl"
           </div>
 
           <div className="grid mt-10 w-[306px] h-[382px] hover:shadow-2xl transition bg-[#f4f5f6] p-6 rounded-2xl">
@@ -83,9 +81,10 @@ export default function Home() {
               <ArrowRight className="text-[#84a17d]" />
             </div>
           </div>
-          <div                 className="
+          <div
+            className="
           flex flex-col gap-4 hover:shadow-2xl transition mt-10 bg-[#f4f5f6] p-6 rounded-2xl"
->
+          >
             <Image
               src={audit}
               alt="audit"
@@ -124,6 +123,9 @@ export default function Home() {
             );
           })}
         </div>
+      </section>
+      <section className="bg-[#f4f5f6]">
+
       </section>
     </div>
   );

@@ -9,6 +9,8 @@ import digital from '@/public/Digital.jpg'
 import design from '@/public/market.jpg'
 import robotics from '@/public/Robotics.jpg'
 import development from '@/public/web-dev.jpg'
+import abstract from '@/public/Abstract.png'
+import experience from '@/public/experience.svg'
 
 
 export const clients = [logo1, logo2, logo3, logo4, logo5, logo6];
@@ -29,6 +31,17 @@ export const services = [
     {
         image:digital,
         title:'Digital Marketing',
+    },
+]
+
+export const about =[
+    {
+        image:digital,
+        logo:experience
+    },
+    {
+        image:design,
+        logo:abstract
     },
 ]
 
