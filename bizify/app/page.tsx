@@ -1,7 +1,7 @@
 import Image from "next/image";
 import group_profile from "@/public/group_profile.png";
 import hero_image from "@/public/hero-image.jpg";
-import {clients,services} from "@/app/data";
+import { clients, services } from "@/app/data";
 import icon from "@/public/Icon.png";
 import audit from "@/public/audit.jpg";
 import { ArrowRight } from "lucide-react";
@@ -55,9 +55,9 @@ export default function Home() {
           })}
         </div>
       </section>
-      <section>
-        <div className="grid grid-cols-3 ">
-          <div>
+      <section className="py-16 px-20">
+        <div className="flex flex-cols-3 gap-4">
+          <div className="w-[53%]">
             <h3 className="text-5xl font-bold">
               Amazing <br /> solutions for <br /> business
             </h3>
@@ -66,11 +66,11 @@ export default function Home() {
               <br /> Strategic discovery process that enables us peelback
               thousands <br /> which enable us to understand.
             </p>
+                          className="
+          flex flex-col gap-4   bg-[#f4f5f6] p-6 rounded-2xl"
           </div>
-          <div
-            className="
-          grid w-[306px] h-[382px] bg-[#f4f5f6] p-6 rounded-2xl"
-          >
+
+          <div className="grid mt-10 w-[306px] h-[382px] hover:shadow-2xl transition bg-[#f4f5f6] p-6 rounded-2xl">
             <Image src={icon} alt="icon" />
             <h3 className="text-2xl font-bold">Marketing Strategy</h3>
             <p>
@@ -83,27 +83,45 @@ export default function Home() {
               <ArrowRight className="text-[#84a17d]" />
             </div>
           </div>
-          <div
-            className="
-          grid w-[306px] h-[382px] bg-[#f4f5f6] p-6 rounded-2xl"
-          >
-            <Image src={audit} alt="audit" width={250} className="rounded-2xl" />
+          <div                 className="
+          flex flex-col gap-4 hover:shadow-2xl transition mt-10 bg-[#f4f5f6] p-6 rounded-2xl"
+>
+            <Image
+              src={audit}
+              alt="audit"
+              width={250}
+              className="rounded-2xl"
+            />
             <h3>Audit & Assurance</h3>
-            <hr />
+            <hr className="text-[#bdb2b2c2]" />
             <div className="flex">
               <button className="text-[#84a17d]">Learn more</button>
               <ArrowRight className="text-[#84a17d]" />
             </div>
           </div>
         </div>
-        <div className="grid grid-cols-4">
-          {services.map((service,index)=>{
-            return(
-              <div>
+        <div className=" grid grid-cols-4 gap-4">
+          {services.map((service, index) => {
+            return (
+              <div
+                key={index}
+                className="
+          flex flex-col gap-4 hover:shadow-2xl transition mt-10 bg-[#f4f5f6] p-6 rounded-2xl"
+              >
+                <Image
+                  src={service.image}
+                  alt="image"
+                  width={250}
+                  className="rounded-xl"
+                />
                 <h3>{service.title}</h3>
-                <Image src={service.image} alt='image' width={250} className="rounded-2xl" />
+                <hr className="text-[#bdb2b2c2]" />
+                <div className="flex">
+                  <button className="text-[#84a17d]">Learn more</button>
+                  <ArrowRight className="text-[#84a17d]" />
+                </div>
               </div>
-            )
+            );
           })}
         </div>
       </section>
