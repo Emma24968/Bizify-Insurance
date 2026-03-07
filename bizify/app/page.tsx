@@ -185,6 +185,9 @@ export default function Home() {
 More About Us            </button>
         </div>
       </section>
+      <section> 
+        <h3>Our team is always here for you</h3>
+      </section>
     </div>
   );
 }
