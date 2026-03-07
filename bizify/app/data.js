@@ -10,7 +10,25 @@ import design from '@/public/market.jpg'
 import robotics from '@/public/Robotics.jpg'
 import development from '@/public/web-dev.jpg'
 
-const clients = [logo1, logo2, logo3, logo4, logo5, logo6];
-const services = [digital,design,robotics,development]
 
-export default clients
+export const clients = [logo1, logo2, logo3, logo4, logo5, logo6];
+// const services = [{digital},design,robotics,development]
+export const services = [
+    {
+        image:robotics,
+        title:'Robotics',
+    },
+    {
+        image:development,
+        title:'Web Development',
+    },
+    {
+        image:design,
+        title:'UI/UX Design',
+    },
+    {
+        image:digital,
+        title:'Digital Marketing',
+    },
+]
+

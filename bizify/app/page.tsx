@@ -1,7 +1,7 @@
 import Image from "next/image";
 import group_profile from "@/public/group_profile.png";
 import hero_image from "@/public/hero-image.jpg";
-import clients from "@/app/data";
+import {clients,services} from "@/app/data";
 import icon from "@/public/Icon.png";
 import audit from "@/public/audit.jpg";
 import { ArrowRight } from "lucide-react";
@@ -96,7 +96,16 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className=""></div>
+        <div className="grid grid-cols-4">
+          {services.map((service,index)=>{
+            return(
+              <div>
+                <h3>{service.title}</h3>
+                <Image src={service.image} alt='image' width={250} className="rounded-2xl" />
+              </div>
+            )
+          })}
+        </div>
       </section>
     </div>
   );
