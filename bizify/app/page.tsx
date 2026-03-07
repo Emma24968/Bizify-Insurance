@@ -1,7 +1,7 @@
 import Image from "next/image";
 import group_profile from "@/public/group_profile.png";
 import hero_image from "@/public/hero-image.jpg";
-import { clients, services } from "@/app/data";
+import { clients, services,cards,card2 } from "@/app/data";
 import icon from "@/public/Icon.png";
 import audit from "@/public/audit.jpg";
 import { ArrowRight } from "lucide-react";
@@ -125,7 +125,25 @@ export default function Home() {
         </div>
       </section>
       <section className="bg-[#f4f5f6]">
-
+<div  className=" flex gap-3">
+  {cards.map((card,index)=>{
+    return(
+      <div key={index}>
+        <Image src={card.image} width={200} alt="card"></Image>
+        <Image src={card.logo} width={200} alt="card"></Image>
+      </div>
+    )
+})}
+  {card2.map((card,index)=>{
+    return(
+      <div key={index}>
+        <Image src={card.logo} width={200} alt="card"></Image>
+        <Image src={card.image} width={200} alt="card"></Image>
+      </div>
+    )
+})}
+</div>
+<div className=""></div>
       </section>
     </div>
   );

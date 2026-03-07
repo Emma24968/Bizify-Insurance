@@ -34,14 +34,14 @@ export const services = [
     },
 ]
 
-export const about =[
+export const cards =[
     {
         image:digital,
         logo:experience
     },
-    {
-        image:design,
-        logo:abstract
-    },
 ]
+export const card2= [{
+    image:design,
+    logo:abstract
+}]
 
