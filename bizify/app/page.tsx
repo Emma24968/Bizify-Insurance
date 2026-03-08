@@ -1,7 +1,15 @@
 import Image from "next/image";
 import group_profile from "@/public/group_profile.png";
 import hero_image from "@/public/hero-image.jpg";
-import { clients, services, cards, card2, checks, teams } from "@/app/data";
+import {
+  clients,
+  services,
+  cards,
+  card2,
+  checks,
+  teams,
+  projects,
+} from "@/app/data";
 import icon from "@/public/Icon.png";
 import audit from "@/public/audit.jpg";
 import { ArrowRight, Linkedin, Instagram, TwitterIcon } from "lucide-react";
@@ -196,14 +204,53 @@ export default function Home() {
           {teams.map((team, index) => {
             return (
               <div className="rounded-lg group relative">
-                <div className="absolute ml-4 mt-5 text-[#969292]  opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col gap-3"><a href="#"> < Linkedin/></a><a href="#"><Instagram /></a><a href="#">< TwitterIcon/></a></div>
-                <Image src={team.image} alt={team.name} 
+                <div className="absolute ml-4 mt-5 text-[#969292]  opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col gap-3">
+                  <a href="#">
+                    {" "}
+                    <Linkedin />
+                  </a>
+                  <a href="#">
+                    <Instagram />
+                  </a>
+                  <a href="#">
+                    <TwitterIcon />
+                  </a>
+                </div>
+                <Image
+                  src={team.image}
+                  alt={team.name}
                   height={478}
-                  className="rounded-t-xl" width={250} />
+                  className="rounded-t-xl"
+                  width={250}
+                />
                 <div className="text-center rounded-b-xl bg-[#e3ebf3d4]">
                   <p className=" text-[15px] font-bold">{team.name}</p>
                   <p>{team.position}</p>
                 </div>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+      <section
+        className="
+     bg-[#153C3C] px-16 "
+      >
+        <div className="flex justify-between">
+          <h3 className="text-5xl font-bold  my-15 ">
+            Our latest project <br /> triumphs
+          </h3>
+          <button className="bg-[#84a17d] w-[10rem] rounded-lg py-3 px-2 text-white">
+            See All Projects{" "}
+          </button>
+        </div>
+        <div className="grid grid-cols-2 gap-1">
+          {projects.map((project, index) => {
+            return (
+              <div>
+                <Image src={project.image} alt={project.title} width={500} />
+                <h3>{project.title}</h3>
+                <p>{project.description}</p>
               </div>
             );
           })}
