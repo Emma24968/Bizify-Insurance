@@ -9,6 +9,7 @@ import {
   checks,
   teams,
   projects,
+  plans
 } from "@/app/data";
 import icon from "@/public/Icon.png";
 import audit from "@/public/audit.jpg";
@@ -60,9 +61,9 @@ export default function Home() {
         <div className="flex gap-4 justify-center">
           {clients.map((client, index) => {
             return (
-              <div>
+              <div key={index}>
                 {" "}
-                <Image src={client} alt="client" key={index} />
+                <Image src={client} alt="client"  />
               </div>
             );
           })}
@@ -274,25 +275,36 @@ export default function Home() {
           })}
         </div>
       </section>{" "}
-      <section>
-        <div>
-          <h3>Choose the plans that suits you!</h3>
-        </div>
-        <div>
-<div className="flex items-center gap-x-3">
-  <span className="text-sm">Monthly</span>
+<section className="text-center my-18">
+  <div className="flex flex-col items-center">
+    <h3 className="text-5xl font-bold mb-8">
+      Choose the plans <br /> that suits you!
+    </h3>
 
-  <label className="relative inline-block w-11 h-6 cursor-pointer">
-    <input type="checkbox" className="peer sr-only" />
+    <div className="flex items-center mb-6 gap-x-3">
+      <span className="text-sm">Monthly</span>
 
-    <span className="absolute inset-0 bg-gray-300 rounded-full peer-checked:bg-[#84a17d] transition"></span>
+      <label className="relative inline-block w-11 h-6 cursor-pointer">
+        <input type="checkbox" className="peer sr-only" />
 
-    <span className="absolute top-1/2 left-0.5 -translate-y-1/2 w-5 h-5 bg-white rounded-full transition-transform peer-checked:translate-x-5"></span>
-  </label>
+        <span className="absolute inset-0 bg-gray-300 rounded-full peer-checked:bg-[#84a17d] transition"></span>
 
-  <span className="text-sm">Yearly</span>
-</div>        </div>
-      </section>
+        <span className="absolute top-1/2 left-0.5 -translate-y-1/2 w-5 h-5 bg-white rounded-full transition-transform peer-checked:translate-x-5"></span>
+      </label>
+
+      <span className="text-sm">Yearly</span>
     </div>
+  </div>
+
+  <div className="flex justify-center gap-14">
+    {plans.map((plan, index) => {
+      return (
+        <div key={index}>
+          <Image src={plan} alt="plan" width={300} />
+        </div>
+      );
+    })}
+  </div>
+</section>    </div>
   );
 }

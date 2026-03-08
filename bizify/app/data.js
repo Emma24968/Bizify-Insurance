@@ -22,6 +22,9 @@ import project1 from '@/public/project1.webp'
 import project2 from '@/public/project2.webp'
 import project3 from '@/public/project3.webp'
 import project4 from '@/public/project4.webp'
+import Basic from '@/public/Basic.png'
+import Premium from '@/public/Premium.png'
+import Standard from '@/public/Standard.png'
 
 export const clients = [logo1, logo2, logo3, logo4, logo5, logo6];
 // const services = [{digital},design,robotics,development]
@@ -98,4 +101,8 @@ export const projects = [
     title:'Business Development',
     description:'Business Planning'
   },
+]
+
+export const plans = [
+  Basic,Premium,Standard
 ]
