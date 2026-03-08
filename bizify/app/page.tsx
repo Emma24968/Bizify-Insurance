@@ -1,10 +1,10 @@
 import Image from "next/image";
 import group_profile from "@/public/group_profile.png";
 import hero_image from "@/public/hero-image.jpg";
-import { clients, services, cards, card2, checks,teams } from "@/app/data";
+import { clients, services, cards, card2, checks, teams } from "@/app/data";
 import icon from "@/public/Icon.png";
 import audit from "@/public/audit.jpg";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Linkedin, Instagram, TwitterIcon } from "lucide-react";
 
 export default function Home() {
   return (
@@ -165,8 +165,10 @@ export default function Home() {
           })}
         </div>
         <div className="flex flex-col w-[60%] gap-15">
-          <h3 className="text-5xl font-bold ">We are the top digital marketer Company</h3>
-          <p >
+          <h3 className="text-5xl font-bold ">
+            We are the top digital marketer Company
+          </h3>
+          <p>
             When an unknown printer took a galley of type and scrambled it ake a
             type specimen book. when an unknown printer took a galley of type
             and scrambled it type specimen book.
@@ -181,24 +183,30 @@ export default function Home() {
               );
             })}
           </div>
-              <button className="bg-[#84a17d] w-[10rem] rounded-lg py-3 px-2 text-white">
-More About Us            </button>
+          <button className="bg-[#84a17d] w-[10rem] rounded-lg py-3 px-2 text-white">
+            More About Us{" "}
+          </button>
         </div>
       </section>
-      <section> 
-        <h3>Our team is always here for you</h3>
-        <div>
-{teams.map((team,index)=>{
-  return(
-    <div>
-      <Image src={team.image} alt={team.name}/>
-      <div>
-        <p>{team.name}</p>
-        <p>{team.position}</p>
-      </div>
-    </div>
-  )
-})}
+      <section className="justify-items-center mb-[4rem]">
+        <h3 className="text-5xl font-bold text-center my-15">
+          Our team is always <br /> here for you
+        </h3>
+        <div className="flex gap-9 ">
+          {teams.map((team, index) => {
+            return (
+              <div className="rounded-lg group relative">
+                <div className="absolute ml-4 mt-5 text-[#fff]  opacity-0 group-hover:opacity-100 transition duration-300"><Instagram />< Linkedin/>< TwitterIcon/></div>
+                <Image src={team.image} alt={team.name} 
+                  height={478}
+                  className="rounded-t-xl" width={250} />
+                <div className="text-center rounded-b-xl bg-[#e3ebf3d4]">
+                  <p className=" text-[15px] font-bold">{team.name}</p>
+                  <p>{team.position}</p>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </section>
     </div>
