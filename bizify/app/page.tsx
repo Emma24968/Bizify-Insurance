@@ -1,7 +1,7 @@
 import Image from "next/image";
 import group_profile from "@/public/group_profile.png";
 import hero_image from "@/public/hero-image.jpg";
-import { clients, services, cards, card2, checks } from "@/app/data";
+import { clients, services, cards, card2, checks,teams } from "@/app/data";
 import icon from "@/public/Icon.png";
 import audit from "@/public/audit.jpg";
 import { ArrowRight } from "lucide-react";
@@ -187,6 +187,19 @@ More About Us            </button>
       </section>
       <section> 
         <h3>Our team is always here for you</h3>
+        <div>
+{teams.map((team,index)=>{
+  return(
+    <div>
+      <Image src={team.image} alt={team.name}/>
+      <div>
+        <p>{team.name}</p>
+        <p>{team.position}</p>
+      </div>
+    </div>
+  )
+})}
+        </div>
       </section>
     </div>
   );

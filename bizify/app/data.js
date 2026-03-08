@@ -63,15 +63,15 @@ export const teams = [
     name:'Brooklyn Simmons',
     position:'Founder'
   },
-  {image:team2,
+  {image:team3,
     name:'Sophia Rodriguez',
     position:'Creative Director'
   },
-  {image:team1,
+  {image:team2,
     name:'Marvin McKinney',
     position:'Product Designer'
   },
-  {image:team1,
+  {image:team4,
     name:'Alexander Cameron',
     position:'Lead Developer'
   },
