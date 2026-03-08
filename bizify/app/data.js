@@ -18,6 +18,10 @@ import team1 from '@/public/Team1.jpg'
 import team2 from '@/public/Team2.jpg'
 import team3 from '@/public/Team3.jpg'
 import team4 from '@/public/Team4.jpg'
+import project1 from '@/public/project1.webp'
+import project2 from '@/public/project2.webp'
+import project3 from '@/public/project3.webp'
+import project4 from '@/public/project4.webp'
 
 export const clients = [logo1, logo2, logo3, logo4, logo5, logo6];
 // const services = [{digital},design,robotics,development]
@@ -74,5 +78,24 @@ export const teams = [
   {image:team4,
     name:'Alexander Cameron',
     position:'Lead Developer'
+  },
+]
+
+export const projects = [
+  {image:project1,
+    title:'Cryptocurrency',
+    description:'Skill Development'
+  },
+  {image:project3,
+    title:'Design & Development',
+    description:'Website Development'
+  },
+  {image:project1,
+    title:'UI/UX Design',
+    description:'Design'
+  },
+  {image:project2,
+    title:'Business Development',
+    description:'Business Planning'
   },
 ]
