@@ -278,7 +278,20 @@ export default function Home() {
         <div>
           <h3>Choose the plans that suits you!</h3>
         </div>
-        <div></div>
+        <div>
+<div className="flex items-center gap-x-3">
+  <span className="text-sm">Monthly</span>
+
+  <label className="relative inline-block w-11 h-6 cursor-pointer">
+    <input type="checkbox" className="peer sr-only" />
+
+    <span className="absolute inset-0 bg-gray-300 rounded-full peer-checked:bg-[#84a17d] transition"></span>
+
+    <span className="absolute top-1/2 left-0.5 -translate-y-1/2 w-5 h-5 bg-white rounded-full transition-transform peer-checked:translate-x-5"></span>
+  </label>
+
+  <span className="text-sm">Yearly</span>
+</div>        </div>
       </section>
     </div>
   );
