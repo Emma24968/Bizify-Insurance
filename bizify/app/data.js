@@ -90,7 +90,7 @@ export const projects = [
     title:'Design & Development',
     description:'Website Development'
   },
-  {image:project1,
+  {image:project4,
     title:'UI/UX Design',
     description:'Design'
   },
