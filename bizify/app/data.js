@@ -14,6 +14,10 @@ import development from "@/public/web-dev.jpg";
 import abstract from "@/public/Abstract.png";
 import experience from "@/public/experience.svg";
 import check from "@/public/check.svg";
+import team1 from '@/public/Team1.jpg'
+import team2 from '@/public/Team2.jpg'
+import team3 from '@/public/Team3.jpg'
+import team4 from '@/public/Team4.jpg'
 
 export const clients = [logo1, logo2, logo3, logo4, logo5, logo6];
 // const services = [{digital},design,robotics,development]
@@ -54,3 +58,21 @@ export const checks = [
   { image: check, description: "Budget Friendly Theme" },
   { image: check, description: "Happy Customers" },
 ];
+export const teams = [
+  {image:team1,
+    name:'Brooklyn Simmons',
+    position:'Founder'
+  },
+  {image:team2,
+    name:'Sophia Rodriguez',
+    position:'Creative Director'
+  },
+  {image:team1,
+    name:'Marvin McKinney',
+    position:'Product Designer'
+  },
+  {image:team1,
+    name:'Alexander Cameron',
+    position:'Lead Developer'
+  },
+]
