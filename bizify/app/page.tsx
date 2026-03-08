@@ -196,7 +196,7 @@ export default function Home() {
           {teams.map((team, index) => {
             return (
               <div className="rounded-lg group relative">
-                <div className="absolute ml-4 mt-5 text-[#fff]  opacity-0 group-hover:opacity-100 transition duration-300"><Instagram />< Linkedin/>< TwitterIcon/></div>
+                <div className="absolute ml-4 mt-5 text-[#969292]  opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col gap-3"><a href="#"> < Linkedin/></a><a href="#"><Instagram /></a><a href="#">< TwitterIcon/></a></div>
                 <Image src={team.image} alt={team.name} 
                   height={478}
                   className="rounded-t-xl" width={250} />
