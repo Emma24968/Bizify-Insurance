@@ -9,7 +9,7 @@ import {
   checks,
   teams,
   projects,
-  plans
+  plans,
 } from "@/app/data";
 import icon from "@/public/Icon.png";
 import audit from "@/public/audit.jpg";
@@ -63,7 +63,7 @@ export default function Home() {
             return (
               <div key={index}>
                 {" "}
-                <Image src={client} alt="client"  />
+                <Image src={client} alt="client" />
               </div>
             );
           })}
@@ -275,36 +275,47 @@ export default function Home() {
           })}
         </div>
       </section>{" "}
-<section className="text-center my-18">
-  <div className="flex flex-col items-center">
-    <h3 className="text-5xl font-bold mb-8">
-      Choose the plans <br /> that suits you!
-    </h3>
+      <section className="text-center my-18">
+        <div className="flex flex-col items-center">
+          <h3 className="text-5xl font-bold mb-8">
+            Choose the plans <br /> that suits you!
+          </h3>
 
-    <div className="flex items-center mb-6 gap-x-3">
-      <span className="text-sm">Monthly</span>
+          <div className="flex items-center mb-6 gap-x-3">
+            <span className="text-sm">Monthly</span>
 
-      <label className="relative inline-block w-11 h-6 cursor-pointer">
-        <input type="checkbox" className="peer sr-only" />
+            <label className="relative inline-block w-11 h-6 cursor-pointer">
+              <input type="checkbox" className="peer sr-only" />
 
-        <span className="absolute inset-0 bg-gray-300 rounded-full peer-checked:bg-[#84a17d] transition"></span>
+              <span className="absolute inset-0 bg-gray-300 rounded-full peer-checked:bg-[#84a17d] transition"></span>
 
-        <span className="absolute top-1/2 left-0.5 -translate-y-1/2 w-5 h-5 bg-white rounded-full transition-transform peer-checked:translate-x-5"></span>
-      </label>
+              <span className="absolute top-1/2 left-0.5 -translate-y-1/2 w-5 h-5 bg-white rounded-full transition-transform peer-checked:translate-x-5"></span>
+            </label>
 
-      <span className="text-sm">Yearly</span>
-    </div>
-  </div>
-
-  <div className="flex justify-center gap-14">
-    {plans.map((plan, index) => {
-      return (
-        <div key={index}>
-          <Image src={plan} alt="plan" width={300} />
+            <span className="text-sm">Yearly</span>
+          </div>
         </div>
-      );
-    })}
-  </div>
-</section>    </div>
+
+        <div className="flex justify-center gap-14">
+          {plans.map((plan, index) => {
+            return (
+              <div key={index}>
+                <h3>{plan.title}</h3>
+                <p>{plan.description}</p>
+                <div><p>${plan.price}/{plan.period}</p></div>
+                <div>
+                  <div className=""><Image src={plan.check} alt="check"/><p>{plan.description1}</p></div>
+                  <div className=""><Image src={plan.check} alt="check"/><p>{plan.description2}</p></div>
+                  <div className=""><Image src={plan.check} alt="check"/><p>{plan.description3}</p></div>
+                  <div className=""><Image src={plan.check} alt="cancel"/><p>{plan.description4}</p></div>
+                  <div className=""><Image src={plan.cancel} alt="cancel"/><p>{plan.description5}</p></div>
+                  <div className=""><Image src={plan.cancel} alt="cancel"/><p>{plan.description6}</p></div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </section>{" "}
+    </div>
   );
 }

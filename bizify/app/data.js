@@ -14,17 +14,18 @@ import development from "@/public/web-dev.jpg";
 import abstract from "@/public/Abstract.png";
 import experience from "@/public/experience.svg";
 import check from "@/public/check.svg";
-import team1 from '@/public/Team1.jpg'
-import team2 from '@/public/Team2.jpg'
-import team3 from '@/public/Team3.jpg'
-import team4 from '@/public/Team4.jpg'
-import project1 from '@/public/project1.webp'
-import project2 from '@/public/project2.webp'
-import project3 from '@/public/project3.webp'
-import project4 from '@/public/project4.webp'
-import Basic from '@/public/Basic.png'
-import Premium from '@/public/Premium.png'
-import Standard from '@/public/Standard.png'
+import cancel from "@/public/cancel.svg";
+import team1 from "@/public/Team1.jpg";
+import team2 from "@/public/Team2.jpg";
+import team3 from "@/public/Team3.jpg";
+import team4 from "@/public/Team4.jpg";
+import project1 from "@/public/project1.webp";
+import project2 from "@/public/project2.webp";
+import project3 from "@/public/project3.webp";
+import project4 from "@/public/project4.webp";
+import Basic from "@/public/Basic.png";
+import Premium from "@/public/Premium.png";
+import Standard from "@/public/Standard.png";
 
 export const clients = [logo1, logo2, logo3, logo4, logo5, logo6];
 // const services = [{digital},design,robotics,development]
@@ -66,43 +67,80 @@ export const checks = [
   { image: check, description: "Happy Customers" },
 ];
 export const teams = [
-  {image:team1,
-    name:'Brooklyn Simmons',
-    position:'Founder'
-  },
-  {image:team3,
-    name:'Sophia Rodriguez',
-    position:'Creative Director'
-  },
-  {image:team2,
-    name:'Marvin McKinney',
-    position:'Product Designer'
-  },
-  {image:team4,
-    name:'Alexander Cameron',
-    position:'Lead Developer'
-  },
-]
+  { image: team1, name: "Brooklyn Simmons", position: "Founder" },
+  { image: team3, name: "Sophia Rodriguez", position: "Creative Director" },
+  { image: team2, name: "Marvin McKinney", position: "Product Designer" },
+  { image: team4, name: "Alexander Cameron", position: "Lead Developer" },
+];
 
 export const projects = [
-  {image:project1,
-    title:'Cryptocurrency',
-    description:'Skill Development'
+  {
+    image: project1,
+    title: "Cryptocurrency",
+    description: "Skill Development",
   },
-  {image:project3,
-    title:'Design & Development',
-    description:'Website Development'
+  {
+    image: project3,
+    title: "Design & Development",
+    description: "Website Development",
   },
-  {image:project4,
-    title:'UI/UX Design',
-    description:'Design'
+  { image: project4, title: "UI/UX Design", description: "Design" },
+  {
+    image: project2,
+    title: "Business Development",
+    description: "Business Planning",
   },
-  {image:project2,
-    title:'Business Development',
-    description:'Business Planning'
-  },
-]
+];
+
+// export const plans = [
+//   Basic,Premium,Standard
+// ]
 
 export const plans = [
-  Basic,Premium,Standard
-]
+  {
+    title: "Basic Plan",
+    description: "Perfect plan to get started",
+    price: "00.00",
+    period: "month",
+    check: check,
+    cancel: cancel,
+    description1: "Limited Access Library",
+    description2: "Commercia License",
+    description3: "Hotline Support 24/7",
+    description4: "100+ HTML UI Elements",
+    description5: "WooCommerce Builder",
+    description6: "Updates for 1 Year",
+  },
+  {
+    title: "Standard Plan",
+    description: "Perfect plan to get started",
+    price: "49.00",
+    period: "month",
+    check: check,
+    cancel: cancel,
+    description1: "Limited Access Library",
+    description2: "Commercia License",
+    description3: "Hotline Support 24/7",
+    description4: "100+ HTML UI Elements",
+    description5: "WooCommerce Builder",
+    description6: "Updates for 1 Year",
+
+    button: "Get Your Plan",
+  },
+  {
+    title: "Premium Plan",
+    description: "Perfect plan to get started",
+    price: "49.00",
+    period: "month",
+    check: check,
+    cancel: cancel,
+    description1: "Limited Access Library",
+    description2: "Commercia License",
+    description3: "Hotline Support 24/7",
+    description4: "100+ HTML UI Elements",
+    description5: "WooCommerce Builder",
+    description6: "Updates for 1 Year",
+
+    button: "Get Your Plan",
+  },
+];
