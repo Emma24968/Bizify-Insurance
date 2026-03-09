@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Unbounded } from "next/font/google";
 import "./globals.css";
 import Image from "next/image";
 import logo from "@/public/logo.svg";
 import { ChevronDown, Menu, Search } from "lucide-react";
 
-const inter = Inter({
+const inter = Unbounded({
   subsets: ["latin"],
 });
 

@@ -210,7 +210,7 @@ export default function Home() {
           {teams.map((team, index) => {
             return (
               <div className="rounded-lg group relative">
-                <div className="absolute ml-4 mt-5 text-[#969292]  opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col gap-3">
+                <div className="absolute ml-4 mt-5 text-[#191818]  opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col gap-3">
                   <a href="#">
                     {" "}
                     <Linkedin />
