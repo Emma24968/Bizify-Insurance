@@ -29,7 +29,6 @@ import blog3 from "@/public/blog3.jpg";
 
 
 export const clients = [logo1, logo2, logo3, logo4, logo5, logo6];
-// const services = [{digital},design,robotics,development]
 export const services = [
   {
     image: robotics,
@@ -93,9 +92,7 @@ export const projects = [
   },
 ];
 
-// export const plans = [
-//   Basic,Premium,Standard
-// ]
+
 
 export const plans = [
   {
