@@ -15,6 +15,8 @@ import icon from "@/public/Icon.png";
 import quote from "@/public/Icon.svg";
 import audit from "@/public/audit.jpg";
 import ai from "@/public/ai.jpg";
+import admin from "@/public/admin.svg";
+import comment from "@/public/comment.svg";
 import {
   ArrowRight,
   Linkedin,
@@ -386,19 +388,30 @@ export default function Home() {
           </button>
         </div>
         <div>
-          <div className="relative w-[50%]">
+          <div className="relative w-[50%] text-white">
             <Image
               src={ai}
               alt="ai image"
               width={400}
-              className="object-cover "
+              className="object-cover rounded-[8px] " 
             />
             <button className="bg-[#84a17d] bottom-[13rem] text-white absolute right-[15rem]  rounded-lg text-[10px] py-3 px-2 ">
               May 17 2024{" "}
             </button>
-            <div className="bg-green-950">
-<div className=""></div>
-<p className="text-white"><a href="#">How You Can Find A Design <br /> Job You Will Truly</a></p>
+            <div className="bg-green-950 rounded-br-[8px] rounded-tl-[8px] p-3 absolute bottom-[0.5px] left-20 w-[20rem]">
+              <div className=" flex text-[10px] gap-2  items-center">
+                <Image src={admin} alt="admin icon" />
+                <p>Admin</p>
+                <Image src={comment} alt="comment icon" />
+                <p>0 Comments</p>
+              </div>
+              <p className="text-white ">
+                <a href="#">
+                  <u>
+                    How You Can Find A Design <br /> Job You Will Truly
+                  </u>
+                </a>
+              </p>
             </div>
           </div>
           <div className=""></div>
