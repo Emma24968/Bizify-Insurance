@@ -19,6 +19,8 @@ import {
   Instagram,
   TwitterIcon,
   ArrowUpRight,
+  ChevronRight,
+  ChevronLeft,
 } from "lucide-react";
 
 export default function Home() {
@@ -302,23 +304,57 @@ export default function Home() {
               <div key={index} className="rounded-xl bg-[#e3ebf3d4] p-10">
                 <h3 className="text-[25px] font-semibold mb-8">{plan.title}</h3>
                 <p>{plan.description}</p>
-                <div className="bg-white p-4 rounded-[9px] mt-4 mb-5"><p ><span className="text-[20px] font-bold">${plan.price}</span>/<small>{plan.period}</small></p></div>
-                <div className="grid gap-6">
-                  <div className="flex gap-4 items-center"><Image src={plan.check} width={25} alt="check"/><p>{plan.description1}</p></div>
-                  <div className="flex gap-4 items-center"><Image src={plan.check} width={25} alt="check"/><p>{plan.description2}</p></div>
-                  <div className="flex gap-4 items-center"><Image src={plan.check} width={25} alt="check"/><p>{plan.description3}</p></div>
-                  <div className="flex gap-4 items-center"><Image src={plan.check} width={25} alt="cancel"/><p>{plan.description4}</p></div>
-                  <div className="flex gap-4 items-center"><Image src={plan.cancel} width={25} alt="cancel"/><p>{plan.description5}</p></div>
-                  <div className="flex gap-4 items-center"><Image src={plan.cancel} width={25} alt="cancel"/><p>{plan.description6}</p></div>
+                <div className="bg-white p-4 rounded-[9px] mt-4 mb-5">
+                  <p>
+                    <span className="text-[20px] font-bold">${plan.price}</span>
+                    /<small>{plan.period}</small>
+                  </p>
                 </div>
-                <button className="bg-[#84a17d] w-[16rem] mt-4 cursor-pointer rounded-lg py-3 px-2  transition">{plan.button}</button>
+                <div className="grid gap-6">
+                  <div className="flex gap-4 items-center">
+                    <Image src={plan.check} width={25} alt="check" />
+                    <p>{plan.description1}</p>
+                  </div>
+                  <div className="flex gap-4 items-center">
+                    <Image src={plan.check} width={25} alt="check" />
+                    <p>{plan.description2}</p>
+                  </div>
+                  <div className="flex gap-4 items-center">
+                    <Image src={plan.check} width={25} alt="check" />
+                    <p>{plan.description3}</p>
+                  </div>
+                  <div className="flex gap-4 items-center">
+                    <Image src={plan.check} width={25} alt="cancel" />
+                    <p>{plan.description4}</p>
+                  </div>
+                  <div className="flex gap-4 items-center">
+                    <Image src={plan.cancel} width={25} alt="cancel" />
+                    <p>{plan.description5}</p>
+                  </div>
+                  <div className="flex gap-4 items-center">
+                    <Image src={plan.cancel} width={25} alt="cancel" />
+                    <p>{plan.description6}</p>
+                  </div>
+                </div>
+                <button className="bg-[#84a17d] w-[16rem] mt-4 cursor-pointer rounded-lg py-3 px-2  transition">
+                  {plan.button}
+                </button>
               </div>
             );
           })}
         </div>
       </section>{" "}
       <section>
-        <p>“ Working with several word press themes and templates the  years, I only say this is best in every level. “It sounds like you're expressing satisfaction alongside Bunker in implementing your new  positioning guidelines.This  that Bunker has done an excellent.”</p>
+        <ChevronRight />
+        <p>
+
+          “ Working with several word press themes and templates the years, I
+          only <br /> say this is best in every level. “It sounds like you're
+          expressing satisfaction <br /> alongside Bunker in implementing your
+          new positioning guidelines.This <br /> that Bunker has done an
+          excellent.”
+        </p>
+        <ChevronLeft />
       </section>
     </div>
   );
