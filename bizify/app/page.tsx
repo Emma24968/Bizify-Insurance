@@ -10,6 +10,7 @@ import {
   teams,
   projects,
   plans,
+  blogs,
 } from "@/app/data";
 import icon from "@/public/Icon.png";
 import quote from "@/public/Icon.svg";
@@ -349,74 +350,104 @@ export default function Home() {
           })}
         </div>
       </section>{" "}
-      <section className="relative text-center bg-gray-300 py-16 flex flex-col items-center">
-        <div className="absolute left-5 top-1/2 -translate-y-1/2 h-[45px] w-[45px] bg-white rounded-[4px] flex items-center justify-center cursor-pointer">
-          <ChevronLeft />
+<section className="relative text-center bg-gray-300 py-16 flex flex-col items-center">
+  <div className="absolute left-5 top-1/2 -translate-y-1/2 h-[45px] w-[45px] bg-white rounded flex items-center justify-center cursor-pointer">
+    <ChevronLeft />
+  </div>
+
+  <Image src={quote} alt="quote icon" className="mb-4" />
+
+  <p className="my-6 max-w-2xl">
+    “Working with several WordPress themes and templates over the years, I can only
+    say this is the best on every level. It sounds like you're expressing
+    satisfaction alongside Bunker in implementing your new positioning
+    guidelines. This shows that Bunker has done an excellent job.”
+  </p>
+
+  <div className="flex gap-1 mb-4">
+    {[...Array(5)].map((_, index) => (
+      <Star key={index} fill="#ECB014" className="text-[#ECB014]" />
+    ))}
+  </div>
+
+  <p className="font-semibold">Marvin McKinney</p>
+  <p className="text-sm text-gray-600">Lead Developer</p>
+
+  <div className="absolute right-5 top-1/2 -translate-y-1/2 h-[45px] w-[45px] bg-white rounded flex items-center justify-center cursor-pointer">
+    <ChevronRight />
+  </div>
+</section>
+
+
+<section className="px-16 py-16">
+  <div className="flex justify-between items-center mb-12">
+    <h3 className="text-5xl font-bold">
+      Useful articles & <br /> blog posts
+    </h3>
+
+    <button className="bg-[#84a17d] text-[15px] w-[10rem] rounded-lg py-3 px-2 text-white">
+      See All Projects
+    </button>
+  </div>
+
+  <div className="flex justify-between ">
+
+    <div className="relative w-1/2 text-white">
+      <Image
+        src={ai}
+        alt="ai image"
+        width={550}
+        className="object-cover rounded-lg"
+      />
+
+      <button className="bg-[#84a17d] text-white absolute bottom-48 right-40 rounded-lg text-xs py-2 px-3">
+        May 17 2024
+      </button>
+
+      <div className="bg-green-950 rounded-br-lg rounded-tl-lg p-4 absolute bottom-0 left-20 w-[20rem]">
+        <div className="flex text-xs gap-2 items-center mb-2">
+          <Image src={admin} alt="admin icon" />
+          <p>Admin</p>
+          <Image src={comment} alt="comment icon" />
+          <p>0 Comments</p>
         </div>
 
-        <p className=" my-6">
-          {" "}
-          <Image src={quote} alt="quote icon" className="mx-auto mb-4" />{" "}
-          “Working with several WordPress themes and templates over the years, I
-          can only <br /> say this is the best on every level. It sounds like
-          you're expressing satisfaction <br /> alongside Bunker in implementing
-          your new positioning guidelines. This <br /> shows that Bunker has
-          done an excellent job.”{" "}
-        </p>
-
-        <div className="flex gap-1 justify-center mb-4">
-          {[...Array(5)].map((_, index) => (
-            <Star key={index} fill="#ECB014" className="text-[#ECB014]" />
-          ))}
-        </div>
-
-        <p className="font-semibold">Marvin McKinney</p>
-        <p className="text-sm text-gray-600">Lead Developer</p>
-
-        <div className="absolute right-5 top-1/2 -translate-y-1/2 h-[45px] w-[45px] bg-white rounded-[4px] flex items-center justify-center cursor-pointer">
-          <ChevronRight />
-        </div>
-      </section>
-      <section className=" px-16 py-16">
-        <div className="flex justify-between items-center mb-12">
-          <h3 className="text-5xl font-bold">
-            Useful articles & <br /> blog posts
-          </h3>
-
-          <button className="bg-[#84a17d] w-[10rem] rounded-lg py-3 px-2  transition">
-            See All Projects
-          </button>
-        </div>
-        <div>
-          <div className="relative w-[50%] text-white">
-            <Image
-              src={ai}
-              alt="ai image"
-              width={400}
-              className="object-cover rounded-[8px] " 
-            />
-            <button className="bg-[#84a17d] bottom-[13rem] text-white absolute right-[15rem]  rounded-lg text-[10px] py-3 px-2 ">
-              May 17 2024{" "}
-            </button>
-            <div className="bg-green-950 rounded-br-[8px] rounded-tl-[8px] p-3 absolute bottom-[0.5px] left-20 w-[20rem]">
-              <div className=" flex text-[10px] gap-2  items-center">
-                <Image src={admin} alt="admin icon" />
-                <p>Admin</p>
-                <Image src={comment} alt="comment icon" />
-                <p>0 Comments</p>
-              </div>
-              <p className="text-white ">
-                <a href="#">
-                  <u>
-                    How You Can Find A Design <br /> Job You Will Truly
-                  </u>
-                </a>
-              </p>
-            </div>
-          </div>
-          <div className=""></div>
-        </div>
-      </section>
+        <a href="#" className="underline">
+          How You Can Find A Design <br /> Job You Will Truly
+        </a>
+      </div>
     </div>
+
+    {/* Blog List */}
+    <div className="grid gap-4">
+      {blogs.map((blog, index) => (
+        <div key={index} className="flex">
+
+          <Image
+            src={blog}
+            alt="blog image"
+            width={100}
+            className="rounded-l-lg"
+          />
+
+          <div className="bg-green-950 p-3 rounded-r-lg w-[20rem] text-white">
+            <div className="flex text-xs gap-2 items-center mb-2">
+              <Image src={admin} alt="admin icon" />
+              <p>Admin</p>
+              <Image src={comment} alt="comment icon" />
+              <p>0 Comments</p>
+            </div>
+
+            <a href="#" className="underline">
+              How You Can Find A Design <br /> Job You Will Truly
+            </a>
+          </div>
+
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>    </div>
   );
 }

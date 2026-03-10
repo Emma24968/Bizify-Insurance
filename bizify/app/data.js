@@ -23,9 +23,10 @@ import project1 from "@/public/project1.webp";
 import project2 from "@/public/project2.webp";
 import project3 from "@/public/project3.webp";
 import project4 from "@/public/project4.webp";
-import Basic from "@/public/Basic.png";
-import Premium from "@/public/Premium.png";
-import Standard from "@/public/Standard.png";
+import blog1 from "@/public/blog1.jpg";
+import blog2 from "@/public/blog2.jpg";
+import blog3 from "@/public/blog3.jpg";
+
 
 export const clients = [logo1, logo2, logo3, logo4, logo5, logo6];
 // const services = [{digital},design,robotics,development]
@@ -145,3 +146,6 @@ export const plans = [
     button: "Get Your Plan",
   },
 ];
+ export const blogs=[
+  blog1,blog2,blog3
+ ]
