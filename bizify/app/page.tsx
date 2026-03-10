@@ -217,7 +217,7 @@ export default function Home() {
         <div className="flex gap-9 ">
           {teams.map((team, index) => {
             return (
-              <div className="rounded-lg group relative">
+              <div key={index} className="rounded-lg group relative">
                 <div className="absolute ml-4 mt-5 text-[#191818]  opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col gap-3">
                   <a href="#">
                     {" "}

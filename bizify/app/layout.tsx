@@ -4,7 +4,15 @@ import "./globals.css";
 import Image from "next/image";
 import logo from "@/public/logo.svg";
 import menu from "@/public/menu.svg";
-import { ChevronDown, Facebook, Instagram, Linkedin, Menu, Search, Twitter } from "lucide-react";
+import {
+  ChevronDown,
+  Facebook,
+  Instagram,
+  Linkedin,
+  Menu,
+  Search,
+  Twitter,
+} from "lucide-react";
 
 const inter = Unbounded({
   subsets: ["latin"],
@@ -52,21 +60,64 @@ export default function RootLayout({
         </header>
         {children}
       </body>
-        <footer>
-          <div className="">
-            <Image src={logo} alt="logo"/>
-            <p>Monotonectally synergize granular top visualize strategic infomediaries afters task state of the art infrastructures.</p>
-            <div>
-              <Facebook />
-              <Linkedin />
-              <Twitter />
-              <Instagram />
-            </div>
+      <footer>
+        <div className="">
+          <Image src={logo} alt="logo" />
+          <p>
+            Monotonectally synergize granular top visualize strategic
+            infomediaries afters task state of the art infrastructures.
+          </p>
+          <div>
+            <Facebook />
+            <Linkedin />
+            <Twitter />
+            <Instagram />
           </div>
-          <div className=""></div>
-          <div className=""></div>
-          <div className=""></div>
-        </footer>
+        </div>
+        <div className="">
+          <h3>Quick Links</h3>
+          <ul>
+            <li>
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="#">About us</a>
+            </li>
+            <li>
+              <a href="#">Pages</a>
+            </li>
+            <li>
+              <a href="#">Blog</a>
+            </li>
+            <li>
+              <a href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <div className="">
+          <h3>Useful Links</h3>
+          <ul>
+            <li>
+              <a href="#">Company</a>
+            </li>
+            <li>
+              <a href="#">Career</a>
+            </li>
+            <li>
+              <a href="#">Our Blog</a>
+            </li>
+            <li>
+              <a href="#">Press Media</a>
+            </li>
+            <li>
+              <a href="#">Privacy Policy</a>
+            </li>
+          </ul>
+        </div>
+        <div className="">
+          
+        </div>
+      </footer>
     </html>
   );
 }
