@@ -33,7 +33,7 @@ import blog1 from "@/public/blog1.jpg";
 import blog2 from "@/public/blog2.jpg";
 import blog3 from "@/public/blog3.jpg";
 
-
+export const gallerys=[ig1,ig2,ig3,ig4,ig5,ig6]
 export const clients = [logo1, logo2, logo3, logo4, logo5, logo6];
 export const services = [
   {

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Unbounded } from "next/font/google";
 import "./globals.css";
+import { gallerys } from "@/app/data";
 import Image from "next/image";
 import logo from "@/public/logo.svg";
 import menu from "@/public/menu.svg";
@@ -8,6 +9,7 @@ import {
   ChevronDown,
   Facebook,
   Instagram,
+  InstagramIcon,
   Linkedin,
   Menu,
   Search,
@@ -31,93 +33,106 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} antialiased`}>
-        <header className="bg-[#FBFBFB] flex items-center justify-between p-4">
-          <Image src={logo} alt="Bizify Logo" width={150} height={50} />
+<header className="bg-[#FBFBFB] flex items-center justify-between px-10 py-4">
 
-          <nav>
-            <ul className="flex gap-4">
-              <li className="flex gap-0.5">
-                {" "}
-                <a href="#">Home</a> <ChevronDown />
-              </li>
-              <li>
-                <a href="#">About us</a>
-              </li>
-              <li className="flex gap-0.5">
-                {" "}
-                <a href="#">Pages</a>
-                <ChevronDown />
-              </li>
-              <li className="flex gap-0.5">
-                <a href="#">Blog</a> <ChevronDown />
-              </li>
-              <li>
-                <a href="#">Contact</a>
-              </li>
-            </ul>
-            <Search /> <Image src={menu} alt="menu icon" />
-          </nav>
-        </header>
-        {children}
+  <Image src={logo} alt="Bizify Logo" width={150} height={50} />
+
+  <nav>
+    <ul className="flex items-center gap-6">
+      <li className="flex items-center gap-1 cursor-pointer">
+        <a href="#">Home</a>
+        <ChevronDown size={16} />
+      </li>
+
+      <li>
+        <a href="#">About us</a>
+      </li>
+
+      <li className="flex items-center gap-1 cursor-pointer">
+        <a href="#">Pages</a>
+        <ChevronDown size={16} />
+      </li>
+
+      <li className="flex items-center gap-1 cursor-pointer">
+        <a href="#">Blog</a>
+        <ChevronDown size={16} />
+      </li>
+
+      <li>
+        <a href="#">Contact</a>
+      </li>
+    </ul>
+  </nav>
+
+  <div className="flex items-center gap-4">
+    <Search className="cursor-pointer" />
+    <Image src={menu} alt="menu icon" width={24} className="cursor-pointer" />
+  </div>
+
+</header>        {children}
       </body>
-      <footer>
-        <div className="">
-          <Image src={logo} alt="logo" />
-          <p>
-            Monotonectally synergize granular top visualize strategic
-            infomediaries afters task state of the art infrastructures.
-          </p>
-          <div>
-            <Facebook />
-            <Linkedin />
-            <Twitter />
-            <Instagram />
-          </div>
-        </div>
-        <div className="">
-          <h3>Quick Links</h3>
-          <ul>
-            <li>
-              <a href="#">Home</a>
-            </li>
-            <li>
-              <a href="#">About us</a>
-            </li>
-            <li>
-              <a href="#">Pages</a>
-            </li>
-            <li>
-              <a href="#">Blog</a>
-            </li>
-            <li>
-              <a href="#">Contact</a>
-            </li>
-          </ul>
-        </div>
-        <div className="">
-          <h3>Useful Links</h3>
-          <ul>
-            <li>
-              <a href="#">Company</a>
-            </li>
-            <li>
-              <a href="#">Career</a>
-            </li>
-            <li>
-              <a href="#">Our Blog</a>
-            </li>
-            <li>
-              <a href="#">Press Media</a>
-            </li>
-            <li>
-              <a href="#">Privacy Policy</a>
-            </li>
-          </ul>
-        </div>
-        <div className="">
-          
-        </div>
-      </footer>
-    </html>
+<footer className="bg-[#F4F5F6] px-16 py-14 grid grid-cols-4 gap-12">
+
+  <div className="flex flex-col gap-6">
+    <Image src={logo} alt="logo" />
+
+    <p className="text-gray-600">
+      Monotonectally synergize granular top visualize strategic
+      infomediaries after task state of the art infrastructures.
+    </p>
+
+    <div className="flex gap-4">
+      <div className="bg-white p-2 rounded hover:bg-[#84A17D] cursor-pointer">
+        <Facebook />
+      </div>
+
+      <div className="bg-white p-2 rounded hover:bg-[#84A17D] cursor-pointer">
+        <Twitter />
+      </div>
+
+      <div className="bg-white p-2 rounded hover:bg-[#84A17D] cursor-pointer">
+        <Linkedin />
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <h3 className="font-semibold mb-4">Quick Links</h3>
+
+    <ul className="flex flex-col gap-3 text-gray-600">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About us</a></li>
+      <li><a href="#">Pages</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </div>
+
+  <div>
+    <h3 className="font-semibold mb-4">Useful Links</h3>
+
+    <ul className="flex flex-col gap-3 text-gray-600">
+      <li><a href="#">Company</a></li>
+      <li><a href="#">Career</a></li>
+      <li><a href="#">Our Blog</a></li>
+      <li><a href="#">Press Media</a></li>
+      <li><a href="#">Privacy Policy</a></li>
+    </ul>
+  </div>
+
+  <div className="grid grid-cols-3 gap-4">
+    {gallerys.map((gallery, index) => (
+      <Image
+        key={index}
+        src={gallery}
+        alt="gallery"
+        width={90}
+        height={90}
+        className="rounded"
+      />
+    ))}
+  </div>
+
+</footer>    </html>
   );
 }

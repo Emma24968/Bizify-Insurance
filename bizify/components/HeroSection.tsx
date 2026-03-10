@@ -1,0 +1,40 @@
+import React from 'react'
+import Image from 'next/image';
+import group_profile from "@/public/group_profile.png";
+import hero_image from "@/public/hero-image.jpg";
+
+export default function HeroSection() {
+  return (
+    <div>      <section className=" grid grid-cols-2 text-white w-full  ">
+        <div className=" bg-[#153C3C] flex flex-col justify-center px-16 py-15">
+          <h1 className="text-5xl font-bold leading-tight">
+            Get Digital <br />
+            Products For <br />
+            Business
+          </h1>
+          <p className="my-10">
+            Charts are the visual storytellers of your dashboard and admin
+            <br></br>
+            template. They distill complex data into visuals.
+          </p>
+          <div className="flex gap-6">
+            <button className="bg-[#84a17d] rounded-lg py-3 px-6">
+              Our Services
+            </button>
+            <button className="bg-[#fff] text-black rounded-lg py-3 px-6">
+              Contact Us
+            </button>
+          </div>
+          <div className="flex my-4 gap-3 items-center">
+            <Image src={group_profile} alt="group profile" />
+            <p>more than 10k+ trusted customers</p>
+          </div>
+        </div>
+        <div className="">
+          {" "}
+          <Image src={hero_image} alt="hero-image" className="object-cover" />
+        </div>
+      </section>
+</div>
+  )
+}
