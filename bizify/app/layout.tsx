@@ -3,6 +3,7 @@ import { Unbounded } from "next/font/google";
 import "./globals.css";
 import Image from "next/image";
 import logo from "@/public/logo.svg";
+import menu from "@/public/menu.svg";
 import { ChevronDown, Menu, Search } from "lucide-react";
 
 const inter = Unbounded({
@@ -46,12 +47,19 @@ export default function RootLayout({
                 <a href="#">Contact</a>
               </li>
             </ul>
-            <Search /> <Menu />
+            <Search /> <Image src={menu} alt="menu icon" />
           </nav>
         </header>
-
         {children}
       </body>
+        <footer>
+          <div className="">
+            <Image src={logo} alt="logo"/>
+          </div>
+          <div className=""></div>
+          <div className=""></div>
+          <div className=""></div>
+        </footer>
     </html>
   );
 }
