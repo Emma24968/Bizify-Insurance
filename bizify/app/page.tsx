@@ -300,7 +300,7 @@ export default function Home() {
           {plans.map((plan, index) => {
             return (
               <div key={index} className="rounded-xl bg-[#e3ebf3d4] p-10">
-                <h3>{plan.title}</h3>
+                <h3 className="text-[25px] font-semibold mb-8">{plan.title}</h3>
                 <p>{plan.description}</p>
                 <div className="bg-white p-4 rounded-[9px] mt-4 mb-5"><p ><span className="text-[20px] font-bold">${plan.price}</span>/<small>{plan.period}</small></p></div>
                 <div className="grid gap-6">
@@ -317,6 +317,9 @@ export default function Home() {
           })}
         </div>
       </section>{" "}
+      <section>
+        <p>“ Working with several word press themes and templates the  years, I only say this is best in every level. “It sounds like you're expressing satisfaction alongside Bunker in implementing your new  positioning guidelines.This  that Bunker has done an excellent.”</p>
+      </section>
     </div>
   );
 }
