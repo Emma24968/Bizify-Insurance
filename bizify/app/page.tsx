@@ -30,21 +30,6 @@ import {
 export default function Home() {
   return (
     <div>
-      <section className="text-center py-16">
-        <h3 className="mb-16 text-xl font-bold">
-          We’ve worked on over 150 projects <br /> with 100+ clients
-        </h3>
-        <div className="flex gap-4 justify-center">
-          {clients.map((client, index) => {
-            return (
-              <div key={index}>
-                {" "}
-                <Image src={client} alt="client" />
-              </div>
-            );
-          })}
-        </div>
-      </section>
       <section className="py-16 px-20">
         <div className="flex flex-cols-3 gap-4">
           <div className="w-[53%] justify-center">
