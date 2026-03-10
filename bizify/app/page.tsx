@@ -386,16 +386,20 @@ export default function Home() {
           </button>
         </div>
         <div>
-          <div className="relative">
+          <div className="relative w-[50%]">
             <Image
               src={ai}
               alt="ai image"
               width={400}
               className="object-cover "
             />
-            <button className="bg-[#84a17d] text-white absolute  rounded-lg text-[10px] py-3 px-2  transition">
+            <button className="bg-[#84a17d] bottom-[13rem] text-white absolute right-[15rem]  rounded-lg text-[10px] py-3 px-2 ">
               May 17 2024{" "}
             </button>
+            <div className="bg-green-950">
+<div className=""></div>
+<p className="text-white"><a href="#">How You Can Find A Design <br /> Job You Will Truly</a></p>
+            </div>
           </div>
           <div className=""></div>
         </div>
