@@ -110,6 +110,7 @@ export const plans = [
     description4: "100+ HTML UI Elements",
     description5: "WooCommerce Builder",
     description6: "Updates for 1 Year",
+    button: "Get Your Plan",
   },
   {
     title: "Standard Plan",
