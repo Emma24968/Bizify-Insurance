@@ -12,6 +12,7 @@ import {
   plans,
 } from "@/app/data";
 import icon from "@/public/Icon.png";
+import quote from "@/public/Icon.svg";
 import audit from "@/public/audit.jpg";
 import {
   ArrowRight,
@@ -21,6 +22,7 @@ import {
   ArrowUpRight,
   ChevronRight,
   ChevronLeft,
+  Star,
 } from "lucide-react";
 
 export default function Home() {
@@ -344,18 +346,27 @@ export default function Home() {
           })}
         </div>
       </section>{" "}
-      <section>
-        <ChevronRight />
-        <p>
+<section className="relative text-center bg-gray-300 py-16 flex flex-col items-center">
 
-          “ Working with several word press themes and templates the years, I
-          only <br /> say this is best in every level. “It sounds like you're
-          expressing satisfaction <br /> alongside Bunker in implementing your
-          new positioning guidelines.This <br /> that Bunker has done an
-          excellent.”
-        </p>
-        <ChevronLeft />
-      </section>
-    </div>
+  <div className="absolute left-5 top-1/2 -translate-y-1/2 h-[45px] w-[45px] bg-white rounded-full flex items-center justify-center cursor-pointer">
+    <ChevronLeft />
+  </div>
+
+  <p className=" my-6"> <Image src={quote} alt="quote icon" className="mx-auto mb-4" /> “Working with several WordPress themes and templates over the years, I can only <br /> say this is the best on every level. It sounds like you're expressing satisfaction <br /> alongside Bunker in implementing your new positioning guidelines. This <br /> shows that Bunker has done an excellent job.” </p>
+
+  <div className="flex gap-1 justify-center mb-4">
+    {[...Array(5)].map((_, index) => (
+      <Star key={index} fill="#ECB014" className="text-[#ECB014]" />
+    ))}
+  </div>
+
+  <p className="font-semibold">Marvin McKinney</p>
+  <p className="text-sm text-gray-600">Lead Developer</p>
+
+  <div className="absolute right-5 top-1/2 -translate-y-1/2 h-[45px] w-[45px] bg-white rounded-full flex items-center justify-center cursor-pointer">
+    <ChevronRight />
+  </div>
+
+</section></div>
   );
 }
