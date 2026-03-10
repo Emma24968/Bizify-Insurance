@@ -14,6 +14,7 @@ import {
 import icon from "@/public/Icon.png";
 import quote from "@/public/Icon.svg";
 import audit from "@/public/audit.jpg";
+import ai from "@/public/ai.jpg";
 import {
   ArrowRight,
   Linkedin,
@@ -346,27 +347,59 @@ export default function Home() {
           })}
         </div>
       </section>{" "}
-<section className="relative text-center bg-gray-300 py-16 flex flex-col items-center">
+      <section className="relative text-center bg-gray-300 py-16 flex flex-col items-center">
+        <div className="absolute left-5 top-1/2 -translate-y-1/2 h-[45px] w-[45px] bg-white rounded-[4px] flex items-center justify-center cursor-pointer">
+          <ChevronLeft />
+        </div>
 
-  <div className="absolute left-5 top-1/2 -translate-y-1/2 h-[45px] w-[45px] bg-white rounded-full flex items-center justify-center cursor-pointer">
-    <ChevronLeft />
-  </div>
+        <p className=" my-6">
+          {" "}
+          <Image src={quote} alt="quote icon" className="mx-auto mb-4" />{" "}
+          “Working with several WordPress themes and templates over the years, I
+          can only <br /> say this is the best on every level. It sounds like
+          you're expressing satisfaction <br /> alongside Bunker in implementing
+          your new positioning guidelines. This <br /> shows that Bunker has
+          done an excellent job.”{" "}
+        </p>
 
-  <p className=" my-6"> <Image src={quote} alt="quote icon" className="mx-auto mb-4" /> “Working with several WordPress themes and templates over the years, I can only <br /> say this is the best on every level. It sounds like you're expressing satisfaction <br /> alongside Bunker in implementing your new positioning guidelines. This <br /> shows that Bunker has done an excellent job.” </p>
+        <div className="flex gap-1 justify-center mb-4">
+          {[...Array(5)].map((_, index) => (
+            <Star key={index} fill="#ECB014" className="text-[#ECB014]" />
+          ))}
+        </div>
 
-  <div className="flex gap-1 justify-center mb-4">
-    {[...Array(5)].map((_, index) => (
-      <Star key={index} fill="#ECB014" className="text-[#ECB014]" />
-    ))}
-  </div>
+        <p className="font-semibold">Marvin McKinney</p>
+        <p className="text-sm text-gray-600">Lead Developer</p>
 
-  <p className="font-semibold">Marvin McKinney</p>
-  <p className="text-sm text-gray-600">Lead Developer</p>
+        <div className="absolute right-5 top-1/2 -translate-y-1/2 h-[45px] w-[45px] bg-white rounded-[4px] flex items-center justify-center cursor-pointer">
+          <ChevronRight />
+        </div>
+      </section>
+      <section className=" px-16 py-16">
+        <div className="flex justify-between items-center mb-12">
+          <h3 className="text-5xl font-bold">
+            Useful articles & <br /> blog posts
+          </h3>
 
-  <div className="absolute right-5 top-1/2 -translate-y-1/2 h-[45px] w-[45px] bg-white rounded-full flex items-center justify-center cursor-pointer">
-    <ChevronRight />
-  </div>
-
-</section></div>
+          <button className="bg-[#84a17d] w-[10rem] rounded-lg py-3 px-2  transition">
+            See All Projects
+          </button>
+        </div>
+        <div>
+          <div className="relative">
+            <Image
+              src={ai}
+              alt="ai image"
+              width={400}
+              className="object-cover "
+            />
+            <button className="bg-[#84a17d] text-white absolute  rounded-lg text-[10px] py-3 px-2  transition">
+              May 17 2024{" "}
+            </button>
+          </div>
+          <div className=""></div>
+        </div>
+      </section>
+    </div>
   );
 }
