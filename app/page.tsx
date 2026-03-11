@@ -1,3 +1,4 @@
+"use client"
 import HeroSection from "@/components/HeroSection";
 import Client from "@/components/Client";
 import Service from "@/components/Service";

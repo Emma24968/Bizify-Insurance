@@ -15,7 +15,6 @@ import {
   Search,
   Twitter,
 } from "lucide-react";
-
 const inter = Unbounded({
   subsets: ["latin"],
 });
@@ -70,7 +69,7 @@ export default function RootLayout({
   </div>
 
 </header>        {children}
-      </body>
+
 <footer className="bg-[#F4F5F6] px-16 py-14 grid grid-cols-4 gap-12">
 
   <div className="flex flex-col gap-6">
@@ -133,6 +132,8 @@ export default function RootLayout({
     ))}
   </div>
 
-</footer>    </html>
+</footer> 
+      </body>
+   </html>
   );
 }
